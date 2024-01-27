@@ -1,0 +1,14 @@
+
+<form [formGroup]="reservation" (ngSubmit)="onSubmit()">
+    <label for="name">Nom:</label>
+    <input type="text" id="name" formControlName="name">
+  
+    <label for="numberOfPeople">Nombre de personnes:</label>
+    <input type="number" id="numberOfPeople" formControlName="numberOfPeople">
+  
+    <label for="phoneNumber">Numéro de téléphone:</label>
+    <input type="tel" id="phoneNumber" formControlName="phoneNumber">
+  
+    <button type="submit" [disabled]="!reservation.valid">Réserver</button>
+  </form>
+  
