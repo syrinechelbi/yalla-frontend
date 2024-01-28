@@ -5,7 +5,8 @@ import { EventComponent } from './event/event.component';
 
 const routes: Routes = [  { path: 'events', component: EventComponent },
 { path: 'form', component: FormComponent },
-{ path: '', redirectTo: '/events', pathMatch: 'full' },];
+{ path: '', redirectTo: '/events', pathMatch: 'full' }, // Default route to events
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
