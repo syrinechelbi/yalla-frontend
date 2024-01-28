@@ -5,7 +5,6 @@
   </div>
   <label for="name">Votre nom:</label>
   <input type="text" id="name" formControlName="name">
-
   <label>Comment voulez-vous payer ?</label>
   <div>
     <label>
@@ -17,16 +16,15 @@
       <input type="radio" formControlName="paymentMethod" value="online"> en ligne
     </label>
   </div>
-  <div *ngIf="reservation && reservation.get('paymentMethod')?.value === 'online'">
-    
+  <!--<div *ngIf="reservation && reservation.get('paymentMethod')?.value === 'online'">
     <h4>Paiement en ligne</h4>
-    <!-- Ajoutez ici les champs supplémentaires pour le paiement en ligne -->
+    
     <button (click)="imprimerFacture()">Imprimer facture</button>
-  </div>
-  
-
+  </div>  -->
   <button type="submit" [disabled]="!reservation.valid ">Réservez votre place</button>
 </form>
+
+
 
 
 

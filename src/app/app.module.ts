@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PaiementComponent } from './paiement/paiement.component';
 
 
 
@@ -13,7 +14,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     NavbarComponent,
-    ReservationComponent
+    ReservationComponent,
+    PaiementComponent
   ],
   imports: [
     BrowserModule,
