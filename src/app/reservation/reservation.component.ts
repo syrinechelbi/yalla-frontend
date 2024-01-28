@@ -9,14 +9,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 export class ReservationComponent implements OnInit {
   reservation!: FormGroup;
-
+   
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
     this.reservation = this.fb.group({
       name: ['', Validators.required],
-      numberOfPeople: ['', [Validators.required, Validators.min(1)]],
-      phoneNumber: ['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]] 
+      paymentMethod: ['', Validators.required]
     });
   }
 
@@ -25,7 +24,12 @@ export class ReservationComponent implements OnInit {
       // Envoyer les données au backend (NestJS) pour la réservation
       const reservationData = this.reservation.value;
       // Ajoutez ici la logique pour envoyer les données au backend via un service Angular
+      console.log(reservationData);
     }
+  }
+  imprimerFacture() {
+    // Ajoutez ici la logique pour imprimer la facture
+    console.log('Facture imprimée');
   }
 }
 

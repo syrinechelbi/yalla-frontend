@@ -1,14 +1,33 @@
 
 <form [formGroup]="reservation" (ngSubmit)="onSubmit()">
-    <label for="name">Nom:</label>
-    <input type="text" id="name" formControlName="name">
+  <div class="logo-container">
+    <img src="assets\logo.png" alt="Logo" class="logo">
+  </div>
+  <label for="name">Votre nom:</label>
+  <input type="text" id="name" formControlName="name">
+
+  <label>Comment voulez-vous payer ?</label>
+  <div>
+    <label>
+      <input type="radio" formControlName="paymentMethod" value="on-site"> sur place
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="radio" formControlName="paymentMethod" value="online"> en ligne
+    </label>
+  </div>
+  <div *ngIf="reservation && reservation.get('paymentMethod')?.value === 'online'">
+    
+    <h4>Paiement en ligne</h4>
+    <!-- Ajoutez ici les champs supplémentaires pour le paiement en ligne -->
+    <button (click)="imprimerFacture()">Imprimer facture</button>
+  </div>
   
-    <label for="numberOfPeople">Nombre de personnes:</label>
-    <input type="number" id="numberOfPeople" formControlName="numberOfPeople">
-  
-    <label for="phoneNumber">Numéro de téléphone:</label>
-    <input type="tel" id="phoneNumber" formControlName="phoneNumber">
-  
-    <button type="submit" [disabled]="!reservation.valid">Réserver</button>
-  </form>
+
+  <button type="submit" [disabled]="!reservation.valid ">Réservez votre place</button>
+</form>
+
+
+
   
