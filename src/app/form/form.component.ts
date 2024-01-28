@@ -16,6 +16,7 @@ export class FormComponent {
   heureFin: string;
   categorie: string;
   location: string;
+  showSuccessMessage= false;
   
 
   constructor() {
@@ -42,6 +43,7 @@ export class FormComponent {
         categorie: this.categorie,
         location: this.location
       });
+      this.showSuccessMessage=true;
       // Add your logic to send the form data to the server or perform other actions.
     } else {
       // Handle invalid form
