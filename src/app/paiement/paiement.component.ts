@@ -13,6 +13,7 @@ export class PaiementComponent {
   @Output() paymentSubmit: EventEmitter<any> = new EventEmitter<any>();
 
   paymentForm: FormGroup;
+  showInvoice: boolean = false;
 
   constructor(private fb: FormBuilder) {
     this.paymentForm = this.fb.group({
@@ -26,8 +27,12 @@ export class PaiementComponent {
   submitPaymentForm() {
     if (this.paymentForm.valid) {
       this.paymentSubmit.emit(this.paymentForm.value);
+      // Afficher la facture après le paiement réussi
+      this.showInvoice = true;
     }
+
   }
+
   imprimerFacture() {
     
     console.log('Facture imprimée');

@@ -16,13 +16,9 @@
       <input type="radio" formControlName="paymentMethod" value="online"> en ligne
     </label>
   </div>
-  <!--<div *ngIf="reservation && reservation.get('paymentMethod')?.value === 'online'">
-    <h4>Paiement en ligne</h4>
-    
-    <button (click)="imprimerFacture()">Imprimer facture</button>
-  </div>  -->
   <button type="submit" [disabled]="!reservation.valid ">Réservez votre place</button>
 </form>
+<app-paiement *ngIf="showPaymentForm"></app-paiement>
 
 
 

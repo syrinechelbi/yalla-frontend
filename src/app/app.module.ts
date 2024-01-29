@@ -16,6 +16,9 @@ import { PaiementComponent } from './paiement/paiement.component';
 import { EventComponent } from './event/event.component';
 import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
+import { FactureComponent } from './facture/facture.component';
+
+
 
 @NgModule({
   declarations: [
@@ -27,6 +30,7 @@ import { FormsModule } from '@angular/forms';
     PaiementComponent,
     EventComponent,
     FormComponent,
+    FactureComponent
   ],
   imports: [
     CommonModule,
