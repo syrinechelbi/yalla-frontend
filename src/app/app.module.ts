@@ -10,12 +10,20 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ReservationComponent } from './reservation/reservation.component';
+import { PaiementComponent } from './paiement/paiement.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     
+    NavbarComponent,
+    ReservationComponent,
+    PaiementComponent
   ],
   imports: [
     CommonModule,
@@ -26,8 +34,7 @@ import { ToastrModule } from 'ngx-toastr';
     RegisterComponent,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(),
-
-    
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

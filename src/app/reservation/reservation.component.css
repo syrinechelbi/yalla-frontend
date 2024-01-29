@@ -1,0 +1,93 @@
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #F08080	;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    font-family: 'sans-serif'; 
+    background: linear-gradient(to right,#f8e6d9, #928577);
+  }
+  
+  
+  
+  
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #813030;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    color: #cf6464;
+    border: 2px solid #F08080	;
+    border-radius: 10px;
+  }
+  
+  button {
+    padding: 12px;
+    background-color:#F08080		; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:disabled {
+    background-color: #cccccc;
+  
+    cursor: not-allowed;
+  }
+  .payment-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligne les éléments à gauche */
+    margin-top: 20px;
+    background-color: #f8f8f8; /* Couleur de fond du formulaire */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  }
+  
+  .payment-form h4 {
+    color: #333; /* Couleur du texte des titres */
+    margin-bottom: 20px;
+  }
+  
+  .payment-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555; /* Couleur du texte des labels */
+  }
+  
+  .payment-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    color: #555; /* Couleur du texte des champs d'entrée */
+    border: 1px solid #ccc; /* Bordure autour des champs d'entrée */
+    border-radius: 5px;
+  }
+  
+  .payment-form button {
+    padding: 12px;
+    background-color: #4caf50; /* Couleur de fond du bouton */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold; /* Police en gras pour le bouton */
+  }
+  
+  .payment-form button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
