@@ -1,0 +1,70 @@
+
+<div class="container">
+    <div class="phrase-introductive">
+      <div class="line ombre-text">
+        <span class="typed-text">Réservez, créez, vibrez</span>
+      </div>
+      <div class="line ombre-text">Votre événement exceptionnel commence maintenant</div>
+    </div>
+
+    <button class="bouton-explore" (click)="scrollToCategories()">Explorez nos catégories</button>
+
+</div>
+
+<section id="categories" class="categories">
+  <!-- Première ligne de catégories -->
+  <div class="categorie categorie-concert" (click)="navigateToCategory('concert', categoryBtn)">
+    Concert
+  </div>
+  <div class="categorie categorie-festival" (click)="navigateToCategory('festival', categoryBtn)">
+    Festival
+  </div>
+  <div class="categorie categorie-afterwork" (click)="navigateToCategory('afterwork', categoryBtn)">
+    Afterwork
+  </div>
+  <div class="categorie categorie-camping" (click)="navigateToCategory('camping', categoryBtn)">
+    Camping
+  </div>
+</section>
+
+<section id="categories" class="categories">
+  <!-- Deuxième ligne de catégories -->
+  <div class="categorie categorie-randonnée" (click)="navigateToCategory('randonnée', categoryBtn)">
+    Randonnée
+  </div>
+  <div class="categorie categorie-sport" (click)="navigateToCategory('sport', categoryBtn)">
+    Sport
+  </div>
+  <div class="categorie categorie-bien-être" (click)="navigateToCategory('bien-être', categoryBtn)">
+    Bien-être
+  </div>
+  <div class="categorie categorie-food" (click)="navigateToCategory('food', categoryBtn)">
+    Food
+  </div>
+</section>
+
+
+<section id="footer" class="hidden">
+  <div class="footer-left">
+    <p class="center-text">Téléchargez l'application d'une communauté dynamique et passionnée!</p>
+    <div class="app-buttons center">
+      <button class="button-apple">Disponible sur App Store</button>
+      <button class="button-play-store">Disponible sur Google Play</button>
+    </div>
+  </div>
+
+  <div class="footer-center">
+    <p class="center-text">Suivez-nous sur les réseaux sociaux!</p>
+    <div class="social-buttons center">
+      <button class="button-instagram"></button>
+      <button class="button-facebook"></button>
+      <button class="button-twitter"></button>
+    </div>
+  </div>
+
+  <div class="footer-right">
+    <p class="center-text">Contactez-nous!</p>
+    <p class="contact-info">Email: <a href="mailto:yalla_event@gmail.com">yalla_event@gmail.com</a></p>
+    <p class="contact-info">Téléphone: +216 70 156 789</p>
+  </div>
+</section>
