@@ -13,8 +13,9 @@ import { ToastrModule } from 'ngx-toastr';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { PaiementComponent } from './paiement/paiement.component';
-
-
+import { EventComponent } from './event/event.component';
+import { FormComponent } from './form/form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { PaiementComponent } from './paiement/paiement.component';
     
     NavbarComponent,
     ReservationComponent,
-    PaiementComponent
+    PaiementComponent,
+    EventComponent,
+    FormComponent,
   ],
   imports: [
     CommonModule,
@@ -34,7 +37,7 @@ import { PaiementComponent } from './paiement/paiement.component';
     RegisterComponent,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(),
-   
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
