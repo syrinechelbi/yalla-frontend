@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgbDateStruct, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { JsonPipe } from '@angular/common';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-register',
@@ -12,5 +13,11 @@ import { JsonPipe } from '@angular/common';
 })
 export class RegisterComponent {
   model: NgbDateStruct | null = null;
+
+  constructor(private toastr: ToastrService) {}
+
+  showSuccess() {
+    this.toastr.success('Hello world!', 'Toastr fun!');
+  }
 
 }
