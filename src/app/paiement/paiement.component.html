@@ -12,8 +12,9 @@
   </div>
 
 
-
-  <button (click)="imprimerFacture()">Payer et Imprimer facture</button>
+  <button type="submit" (click)="showInvoice = true">Payer et Imprimer facture</button>
+  
 </form>
+<app-facture *ngIf="showInvoice"></app-facture>
 
   

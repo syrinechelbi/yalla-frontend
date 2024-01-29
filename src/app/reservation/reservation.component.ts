@@ -10,6 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ReservationComponent implements OnInit {
  
   reservation!: FormGroup;
+  showPaymentForm: boolean = false;
 
    
 
@@ -25,6 +26,9 @@ export class ReservationComponent implements OnInit {
 
   onSubmit() {
     if (this.reservation.valid) {
+      if (this.reservation.value.paymentMethod === 'online') {
+        this.showPaymentForm = true; // hedhi pour afficher le formulaire de paiement en ligne
+      }
       // Envoyer les données au backend (NestJS) pour la réservation
       const reservationData = this.reservation.value;
       // Ajoutez ici la logique pour envoyer les données au backend via un service Angular
