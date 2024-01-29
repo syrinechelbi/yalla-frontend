@@ -1,5 +1,5 @@
 
-<nav class="navbar" [ngStyle]="{'background': 'linear-gradient(to right, #f8e6d9, #928577)'}">
+<nav *ngIf="navbarService.getShowNavbar()" class="navbar" [ngStyle]="{'background': 'linear-gradient(to right, #f8e6d9, #928577)'}">
 
  
    <div class="logo">

@@ -6,7 +6,7 @@
         align-items: center;
         justify-content: center;
         height: 70vh; /* Adjust the height as needed */
-        background-color:rgb(241, 218, 226);
+        background-color:#f8e6d9;
         padding: 20px;
         width: 100%;
     }
@@ -38,11 +38,12 @@
     margin-top: -90px; /* Ajustez la marge supérieure selon vos besoins */
     font-size: 1.4rem; /* Ajustez la taille de la police selon vos besoins */
     font-weight: bold;
-    color: #f1ebeb; /* Couleur du texte du bouton */
-    background-color:#dc3545 ; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    background-color:#43222e ; /* Couleur de fond du bouton */
     border: none;
     padding: px 20px; /* Ajustez le rembourrage selon vos besoins */
     cursor: pointer;
 
   }
+  
   

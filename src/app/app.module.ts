@@ -19,6 +19,9 @@ import { FormsModule } from '@angular/forms';
 import { FactureComponent } from './facture/facture.component';
 
 
+import { IntroductorySectionComponent } from './introductory-section/introductory-section.component';
+import { FooterComponent } from './footer/footer.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { FactureComponent } from './facture/facture.component';
     PaiementComponent,
     EventComponent,
     FormComponent,
-    FactureComponent
+    FactureComponent,
+   IntroductorySectionComponent,
+   FooterComponent,
+   DashboardComponent,
   ],
   imports: [
     CommonModule,
@@ -41,7 +47,9 @@ import { FactureComponent } from './facture/facture.component';
     RegisterComponent,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(),
-    FormsModule
+    FormsModule,
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
