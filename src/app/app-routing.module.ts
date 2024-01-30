@@ -9,6 +9,8 @@ import { FormComponent } from './form/form.component';
 import { EventComponent } from './event/event.component';
 import { IntroductorySectionComponent } from './introductory-section/introductory-section.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { EventlistsComponent } from './eventlists/eventlists.component';
+import { EventdetailComponent } from './eventdetail/eventdetail.component';
 
 
 const routes: Routes = [
@@ -21,6 +23,10 @@ const routes: Routes = [
   { path: 'events', component: EventComponent },
 { path: 'form', component: FormComponent },
 { path: 'intro', component: IntroductorySectionComponent },
+{ path: 'eventlist', component: EventlistsComponent },
+{ path: 'eventdetails', component: EventdetailComponent },
+
+
 
 
 

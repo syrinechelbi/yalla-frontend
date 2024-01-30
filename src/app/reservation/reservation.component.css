@@ -1,93 +1,104 @@
+/* styles.css */
+
+/* Add margin to the form for better spacing */
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100vh; */
+  background-color: #154f88; /* Set your desired background color */
+  margin-top: 10%;
+}
 
 form {
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 2px solid #F08080	;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    font-family: 'sans-serif'; 
-    background: linear-gradient(to right,#f8e6d9, #928577);
+    margin-top: 40px;
   }
   
-  
-  
-  
-  
-  label {
-    display: block;
-    margin-bottom: 10px;
-    color: #813030;
+  /* Style error messages with a red color */
+  .error-message {
+    color: red;
   }
   
-  input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-    color: #cf6464;
-    border: 2px solid #F08080	;
-    border-radius: 10px;
+  /* Center the form on larger screens */
+  @media (min-width: 768px) {
+    form {
+      top: 50%;
+      max-width: 500px;
+      margin: 0 auto;
+      /* height: 700px; */
+    }
+
+  }
+
+  .form-header {
+    text-align: center;
+    margin-bottom: 20px; /* Add space between the header and form */
   }
   
-  button {
-    padding: 12px;
-    background-color:#F08080		; 
-    color: white;
-    border: none;
-    cursor: pointer;
+  .form-header h3 {
+    margin: 0; /* Remove default margin of h3 */
+  }
+
+
+  .form-header h3 {
+
+  margin: 0; /* Remove default margin to prevent extra spacing */
+  font-size: 24px; /* Set your desired font size */
+  font-weight: bold; /* Optionally set font weight */
+  display: flex; /* Enable flex container */
+  align-items: center; /* Center items vertically within the flex container */
+  justify-content: center; /* Center items horizontally within the flex container */
+  margin-top: 4%;
+}
+
+.form-container {
+  height: 30%;
+  max-width: 500px; /* Set your desired max width */
+  width: 100%;
+  margin: 0 auto;
+  padding:5px 20px 20px;
+  border-radius: 50px; /* Set your desired border radius */
+  background-color: #ffffff; /* Set your desired background color */
+  box-shadow: 0 0 10px rgba(232, 158, 214, 0.753); /* Optional: Add a subtle box shadow */
+  position: relative;
+  margin-top: 5%;
+}
+
+.form input,
+.form textarea,
+.form select {
+  font-weight: 300;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form label {
+  font-weight: 400;
+}
+
+.form button {
+  display: block;
+  margin: 0 auto;
+}
+
+.successMessage {
+    color: #035f03;
+    padding: 5px;
+    background-color: #65f365;
+    margin-top: 5px;
     border-radius: 5px;
-  }
-  
-  button:disabled {
-    background-color: #cccccc;
-  
-    cursor: not-allowed;
-  }
-  .payment-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Aligne les éléments à gauche */
-    margin-top: 20px;
-    background-color: #f8f8f8; /* Couleur de fond du formulaire */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
-  }
-  
-  .payment-form h4 {
-    color: #333; /* Couleur du texte des titres */
-    margin-bottom: 20px;
-  }
-  
-  .payment-form label {
-    display: block;
-    margin-bottom: 8px;
-    color: #555; /* Couleur du texte des labels */
-  }
-  
-  .payment-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-    color: #555; /* Couleur du texte des champs d'entrée */
-    border: 1px solid #ccc; /* Bordure autour des champs d'entrée */
-    border-radius: 5px;
-  }
-  
-  .payment-form button {
-    padding: 12px;
-    background-color: #4caf50; /* Couleur de fond du bouton */
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold; /* Police en gras pour le bouton */
-  }
-  
-  .payment-form button:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
-  }
+}
+
+
+.header-image {
+  width: 50%; /* Adjust the width as needed */
+  max-height: 100px; /* Adjust the maximum height as needed */
+  object-fit: cover; /* Ensure the image covers the container without stretching */
+  margin-bottom: 30px; /* Add margin at the bottom for spacing */
+}

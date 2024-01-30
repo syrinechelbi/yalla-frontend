@@ -22,6 +22,8 @@ import { FactureComponent } from './facture/facture.component';
 import { IntroductorySectionComponent } from './introductory-section/introductory-section.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { EventlistsComponent } from './eventlists/eventlists.component';
+import { EventdetailComponent } from './eventdetail/eventdetail.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
    IntroductorySectionComponent,
    FooterComponent,
    DashboardComponent,
+   EventlistsComponent,
+   EventdetailComponent,
   ],
   imports: [
     CommonModule,
