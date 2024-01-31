@@ -1,30 +1,4 @@
-<!-- 
-<form [formGroup]="reservation" (ngSubmit)="onSubmit()">
-  <div class="logo-container">
-    <img src="assets\logo.png" alt="Logo" class="logo">
-  </div>
-  <label for="name">Votre nom:</label>
-  <input type="text" id="name" formControlName="name">
-  <label>Comment voulez-vous payer ?</label>
-  <div>
-    <label>
-      <input type="radio" formControlName="paymentMethod" value="on-site"> sur place
-    </label>
-  </div>
-  <div>
-    <label>
-      <input type="radio" formControlName="paymentMethod" value="online"> en ligne
-    </label>
-  </div>
-  <button type="submit" [disabled]="!reservation.valid ">Réservez votre place</button>
-</form>
-<app-paiement *ngIf="showPaymentForm"></app-paiement>
 
-
-
-
-
-   -->
 
    <div class="form-container">
     <div class="form-header">
@@ -34,7 +8,7 @@
     </div>
   
     <div class="form">
-  <form #eventForm="ngForm" (ngSubmit)="onSubmit(eventForm)" class="container mt-4">
+  <form #eventForm="ngForm" (ngSubmit)="submit(eventForm)" class="container mt-4">
       <div>
         <label for="nom">Nom</label>
         <input type="text" id="nom" name="nom" [(ngModel)]="nom" #titreNgModel="ngModel" class="form-control" required>
@@ -69,8 +43,8 @@
         <label for="categorie">Type de paiement</label>
         <div style="margin-top: 10px;">
         <select id="type_paiment" name="type_paiment" [(ngModel)]="type_paiment" class="form-control" class="form-control" required>
-          <option value="concert">Paiement en ligne </option>
-          <option value="Festival">Paiement sur place</option>
+          <option value="en_ligne">Paiement en ligne </option>
+          <option value="sur_place">Paiement sur place</option>
          
         </select>
         <div *ngIf="eventForm.controls['categorie'].hasError('required') && (eventForm.controls['categorie'].dirty || eventForm.controls['categorie'].touched)" class="error-message">
@@ -82,7 +56,7 @@
       
     
       <div style="margin-top: 20px;" >
-        <button type="submit" [disabled]="!eventForm.valid" class="btn btn-outline-info">Soumettre</button>
+        <button type="submit" [disabled]="!eventForm.valid" class="btn btn-outline-info" >Soumettre</button>
       </div>
   
       

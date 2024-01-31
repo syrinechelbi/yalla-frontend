@@ -8,34 +8,55 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./paiement.component.css']
 })
 export class PaiementComponent {
+   stroredValue = sessionStorage.getItem('nombre_place');
 
-  @Input() showPaymentForm?: boolean;
-  @Output() paymentSubmit: EventEmitter<any> = new EventEmitter<any>();
+  constructor() { }
+  handler:any = null;
+  ngOnInit() {
+    this.loadStripe();
+  }
 
-  paymentForm: FormGroup;
-  showInvoice: boolean = false;
-
-  constructor(private fb: FormBuilder) {
-    this.paymentForm = this.fb.group({
-      cardNumber: ['', Validators.required],
-      dateExpiration: ['', Validators.required],
-      
+  pay(amount: any) {    
+ 
+    var handler = (<any>window).StripeCheckout.configure({
+      key: 'pk_test_51HxRkiCumzEESdU2Z1FzfCVAJyiVHyHifo0GeCMAyzHPFme6v6ahYeYbQPpD9BvXbAacO2yFQ8ETlKjo4pkHSHSh00qKzqUVK9',
+      locale: 'auto',
+      token: function (token: any) {
+        console.log(token)
+       // alert('Token Created!!');
+      }
     });
-  }
+ 
+    handler.open({
+      name: 'Effectuer votre paiement',
+      description: 'Fournir vos informations',
+      amount: amount * 100
+     
+    });
 
+}
+ 
 
-  submitPaymentForm() {
-    if (this.paymentForm.valid) {
-      this.paymentSubmit.emit(this.paymentForm.value);
-      // Afficher la facture après le paiement réussi
-      this.showInvoice = true;
+  loadStripe() {
+     
+    if(!window.document.getElementById('stripe-script')) {
+      var s = window.document.createElement("script");
+      s.id = "stripe-script";
+      s.type = "text/javascript";
+      s.src = "https://checkout.stripe.com/checkout.js";
+      s.onload = () => {
+        this.handler = (<any>window).StripeCheckout.configure({
+          key: 'pk_test_51HxRkiCumzEESdU2Z1FzfCVAJyiVHyHifo0GeCMAyzHPFme6v6ahYeYbQPpD9BvXbAacO2yFQ8ETlKjo4pkHSHSh00qKzqUVK9',
+          locale: 'auto',
+          token: function (token: any) {
+            console.log(token)
+            alert('Payment Success!!');
+          }
+        });
+      }
+       
+      window.document.body.appendChild(s);
     }
-
-  }
-
-  imprimerFacture() {
-    
-    console.log('Facture imprimée');
   }
 }
 

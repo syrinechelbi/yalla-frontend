@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, NgModel, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-form',
@@ -19,7 +20,7 @@ export class FormComponent {
   showSuccessMessage= false;
   
 
-  constructor() {
+  constructor(private http: HttpClient) {
     // You can also initialize properties in the constructor if needed
      this.titre = ''; 
      this.capacite = 0;
@@ -32,8 +33,8 @@ export class FormComponent {
   onSubmit(form: any): void {
     // Check if the form is valid
     if (form.valid) {
-      // Handle the form submission
-      console.log('Form submitted!', {
+      
+      const eventData = {
         titre: this.titre,
         description: this.description,
         date: this.date,
@@ -42,13 +43,21 @@ export class FormComponent {
         heureFin: this.heureFin,
         categorie: this.categorie,
         location: this.location
-      });
-      this.showSuccessMessage=true;
-      // Add your logic to send the form data to the server or perform other actions.
-    } else {
-      // Handle invalid form
-      console.log('Form is invalid. Please fill in all required fields.');
-    }
+      };
+
+      this.http.post('http://localhost:3000/event', eventData)
+      .subscribe(
+        (response) => {
+          console.log('Form submitted successfully!', response);
+          this.showSuccessMessage = true;
+          console.log(eventData);        },
+        (error) => {
+          console.error('Error submitting form:', error);
+          // Handle error scenarios if needed.
+        }
+      );
+  } 
+
   }
 
 

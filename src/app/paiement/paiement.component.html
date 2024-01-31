@@ -1,20 +1,24 @@
-
-
-<form [formGroup]="paymentForm" (ngSubmit)="submitPaymentForm()">
-  <div>
-    <label for="cardNumber">Numéro de carte :</label>
-    <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required>
-  </div>
-
-  <div>
-    <label for="expiryDate">Date d'expiration :</label>
-    <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YYYY" required>
-  </div>
-
-
-  <button type="submit" (click)="showInvoice = true">Payer et Imprimer facture</button>
+<body>
+    
+  <div class="card">
+      <h4><strong >Event's Name </strong></h4>
+      
   
-</form>
-<app-facture *ngIf="showInvoice"></app-facture>
-
+      <p>Description of the event: 
+      </p>
+      <p>   <strong> Date of the Event:   </strong>  </p>
+      <p>   <strong> Location:   </strong>  </p> 
+      <p>   <strong> Nombre de place   </strong>  {{stroredValue}} </p>
+      <p>   <strong> Prix total:   </strong>  </p> 
+      <p>   <strong> Capacity:   </strong>  </p>
+      <p>   <strong> Start Hour:   </strong>   </p>
+      <p>   <strong> End Hour:   </strong>  </p>
+      
+      
+          <button type="button-custom" class="btn btn-secondary" style="margin-right: 20px; " (click)="pay(200)" > Payer </button>
+         
   
+    </div> 
+  
+   
+  </body>
