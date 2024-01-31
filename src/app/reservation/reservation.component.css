@@ -8,7 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   /* min-height: 100vh; */
-  background-color: #154f88; /* Set your desired background color */
+  background-color: #7e396b; /* Set your desired background color */
   margin-top: 10%;
 }
 
@@ -101,4 +101,12 @@ form {
   max-height: 100px; /* Adjust the maximum height as needed */
   object-fit: cover; /* Ensure the image covers the container without stretching */
   margin-bottom: 30px; /* Add margin at the bottom for spacing */
+}
+
+button{
+  order: 3;
+  background-color: #43222e;
+  border-radius: 10px;
+  border-color: #000000;
+  cursor: pointer;
 }
